@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>  
+    <title>Mark Entry Form</title>
+   <link rel="stylesheet" href="index.css"/>
+   <script src="data.js"></script>
+    <script>
+        function clearPlaceholder(element) {
+            element.placeholder = '';
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <div id="ImageContainerr">
+                <img src="cit.jpg" class="Image" />
+            </div>
+            <h1>Mark Entry Form</h1>
+            <p><b>Fill out the form below</b></p>
+        </div>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-input" type="text" id="name" name="name" minlength="3" maxlength="20" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="department">Department:</label>
+                <!--<input class="form-input" type="text" id="department" name="department" required>-->
+                <select class="form-input" id="department" name="department" required onchange="clearPlaceholder(this);">
+                    <option value="" disabled selected></option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="AIDS">AIDS</option>
+                    <option value="CSBS">CSBS</option>
+                    <option value="AIML">AIML</option>
+                     <option value="CS">CS</option>
+                     <option value="MCT">MCT</option>
+                    <option value="MECH">MECH</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="BME">BME</option>
+
+                    </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="regNo">Registration Number:</label>
+                <input class="form-input" type="text" id="regNo" name="regNo" minlength="6" maxlength="20" required>
+            </div>
+            <div>
+                <label class="form-label">
+                    <label class="form-label" for="gender">Gender:</label>  
+                    <br/> 
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+            </div>
+        <br>
+        <div>
+            <label class="form-label">
+                <label class="form-label" for="gender">Are You a:</label>  
+                <br/> 
+            <label for="ds">DayScholar</label>
+    <input type="radio" name="medium" id="ds" value="ds" checked>
+    <label for="hs">Hosteller</label>
+    <input type="radio" name="medium" id="hs" value="hs">
+</label>
+        </div>
+        <br/>
+            <div class="form-group">
+                <label class="form-label" for="year">Year:</label>
+                <select class="form-input" id="year" name="year" required onchange="clearPlaceholder(this);">
+                    <option value="" disabled selected></option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="exam">Select Exam</label>
+                <select class="form-input" id="exam" name="exam" required onchange="clearPlaceholder(this);">
+                    <option value="" disabled selected></option>
+                    <option value="1">Internal Assesment 1</option>
+                    <option value="2">Internal Assesment 2</option>
+                    <option value="3">Internal Assesment 3</option>     
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="subject1">Subject 1:</label>
+                <input class="form-input" type="number" id="subject1" name="subject1" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="subject2">Subject 2:</label>
+                <input class="form-input" type="number" id="subject2" name="subject2" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="Subject3">Subject 3:</label>
+                <input class="form-input" type="number" id="subject3" name="subject3" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="Subject4">Subject 4:</label>
+                <input class="form-input" type="number" id="subject4" name="subject4" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="Subject5">Subject 5:</label>
+                <input class="form-input" type="number" id="subject5" name="subject5" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="Subject6">Subject 6:</label>
+                <input class="form-input" type="number" id="subject6" name="subject6" required>
+            </div>
+            <button class="form-submit" onclick="gett(),send()"> <type="button">Submit</button>
+            
+        </form>
+    </div>
+
+<script>
+    var obj,reg;
+    function gett(){
+    var name=document.getElementById('name').value;
+    var dept=document.getElementById('department').value;
+    reg=document.getElementById("regNo").value;
+    var year=document.getElementById("year").value;
+    var subject1=document.getElementById("subject1").value;
+    var subject2=document.getElementById("subject2").value;
+    var subject3=document.getElementById("subject3").value;
+    var subject4=document.getElementById("subject4").value;
+    var subject5=document.getElementById("subject5").value;
+    var subject6=document.getElementById("subject6").value;
+
+    obj={name:name,dept:dept,regno:reg,year:year,sub1:subject1,sub2:subject2,sub3:subject3,sub4:subject4,sub5:subject5,sub:subject6};
+    console.log(obj);
+    console.log(name,dept,reg,year,subject1,subject2,subject3,subject4,subject5,subject6);
+    console.log("Form Submitted");
+}
+</script>
+
+<script>
+    subobj={
+    csbs:['ADSA','MDT','AJP','WT','BA','LA'],
+    eee:['OOPS','EMF','EM1','SRP','DLC','LIC'],
+    ece:['OOPS','AIC','EMF','DSD','SS','RPLA'],
+    civil:['ASE','CMC','FM','SURVEY','TPDE','PTDS'],
+    cse:['ADSA','MDT','AJP','WT','EP','LA'],
+    it:['ADSA','MDT','AJP','WT','EP','LA'],
+    cs:['ADSA','MDT','AJP','WT','CCS','LA'],
+    aiml:['ADSA','MDT','AJP','WT','FDSA','LA'],
+    aids:['ADSA','MDT','AJP','WT','EP','LA'],
+    bme:['AHP','SM','EDC','FCS','SP','PS'],
+    mech:['EDC','MT1','FMM','SM','TPDE','ETD'],
+    mct:['EDA','MT','DEMT','MOM','TPDE','FMDS'],
+}
+</script></body>
+</html>

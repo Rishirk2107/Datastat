@@ -1,0 +1,65 @@
+
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+table, th, td {
+    border:  solid rgb(42, 42, 43);
+    border-collapse: collapse;
+  }
+  .heading{
+    width:47pt;
+    border-top-style:solid;
+    border-top-width:1pt;
+    border-left-style:solid;
+    border-left-width:1pt;
+    border-bottom-style:solid;
+    border-bottom-width:1pt;
+    border-right-style:solid;
+    border-right-width:1pt;
+    background-color: brown;
+  
+  }
+  .yr{
+    width:47pt;
+    border-top-style:solid;
+    border-top-width:1pt;
+    border-left-style:solid;
+    border-left-width:1pt;
+    border-bottom-style:solid;
+    border-bottom-width:1pt;
+    border-right-style:solid;
+    border-right-width:1pt;
+    margin-right:2px;
+    margin-top:2px;
+    margin-bottom:2px;
+    text-align: center;
+    text-align: auto;
+
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #pdf{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40%;
+    padding: 10px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#pdf:hover {
+    background-color: #3367d6;
+}
+  
+  

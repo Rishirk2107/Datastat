@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="final.css"/>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <div id="ImageContainerr">
+                <img src="cit.jpg" class="Image" />
+            </div>
+    <h1>Select Department 💼</h1>
+</div>
+<form action="/" method="post">
+<div class="form-group">
+    <label class="form-label" for="department">Department:</label>
+    <!--<input class="form-input" type="text" id="department" name="department" required>-->
+    <select class="form-input" id="department" name="department" required onchange="clearPlaceholder(this);">
+        <option value="" disabled selected></option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="AIDS">AIDS</option>
+        <option value="CSBS">CSBS</option>
+        <option value="AIML">AIML</option>
+         <option value="CS">CS</option>
+         <option value="MCT">MCT</option>
+        <option value="MECH">MECH</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="CIVIL">CIVIL</option>
+        <option value="BME">BME</option>
+
+        </select>
+</div>
+<br/>
+<button class="form-submit" onclick=""> <type="button">Get Files</button><hr/>
+<br/>
+</form>
+</body>
+</html>
+
+
